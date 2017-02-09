@@ -14,10 +14,11 @@ RUN yum clean all && \
 
 ADD ./etc/ /etc/
 ADD ./usr/ /usr/
-ADD ./var/ /var/
 
 WORKDIR /var/www
 
 EXPOSE 80 9001
+
+VOLUME ["/var/www/", "/var/log/"]
 
 ENTRYPOINT ["/usr/bin/supervisord"]
