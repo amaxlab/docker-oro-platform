@@ -19,8 +19,4 @@ ADD ./etc/ /etc/
 
 WORKDIR /var/www
 
-EXPOSE 80 9001
-
 VOLUME ["/var/www/", "/var/log/"]
-
-ENTRYPOINT ["/usr/bin/supervisord"]
