@@ -10,7 +10,7 @@ RUN rpm -i http://mirror.yandex.ru/epel/7Server/x86_64/e/epel-release-7-9.noarch
     ln -s /usr/sbin/composer.phar /usr/sbin/composer && \
     ln -s /usr/sbin/phpunit.phar /usr/sbin/phpunit
 
-RUN yum install -y php56w php56w-gd php56w-intl php56w-mbstring php56w-xml php56w-mcrypt php56w-pgsql php56w-fpm supervisor nginx git
+RUN yum install -y php56w php56w-gd php56w-intl php56w-mbstring php56w-xml php56w-mcrypt php56w-pgsql php56w-mysql php56w-fpm supervisor nginx git
 
 RUN yum clean all && \
     rm -f -R /var/www/html /var/www/cgi-bin
